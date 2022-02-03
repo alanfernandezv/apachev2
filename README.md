@@ -17,7 +17,7 @@
         ipv4_address: 10.1.0.10
 
 ## Contenedor DNS Bind
- Imagen del contenedor: internetsystemsconsortium/bind9:9.16
+ <p>Imagen del contenedor: internetsystemsconsortium/bind9:9.16</p>
  La red creada sera br02 con la ip estatica 10.1.0.9
  Los puertos utilizados son el 53:53
  La ruta del volumen es: conf:/etc/bind
