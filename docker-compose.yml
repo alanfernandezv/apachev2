@@ -1,0 +1,44 @@
+version: "2.2"
+services:
+  asir_bind9_2:
+    image: internetsystemsconsortium/bind9:9.16
+    ports:
+      - 53:53
+    volumes:
+      - conf:/etc/bind
+    networks:
+      br02:
+       ipv4_address: 10.1.0.9
+   
+  ASIR_web_2:
+    image: httpd 
+    ports:
+    - '900:80'
+    volumes:
+     - ./Webv2:/usr/local/apache2/htdocs
+     
+    networks:
+       br02:
+        ipv4_address: 10.1.0.10
+ 
+  asir_cliente_2:
+    image: kasmweb/desktop:1.9.0-rolling
+    ports:
+      - '6901:6901'
+    environment:
+       - VNC_PW=0341
+  
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
+    networks:
+      - br02
+
+volumes:
+  conf:
+    
+
+
+networks:
+   br02:
+    external: true
+        
