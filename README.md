@@ -1,8 +1,8 @@
 #Práctica ServidorApacheWeb
- Contenedor Server:
- -Creación del contenedor apachesever
-  -Escogo la imagen httpd
-  -La red crear se llamará  br02.
+ - Contenedor Server:
+ - Creación del contenedor apachesever
+ - Escogo la imagen httpd
+ - La red crear se llamará  br02.
  - El mapeo de los puertos sera el 900 y 80
  - Ruta del volumen : ./Webv2:/usr/local/apache2/htdocs
         ASIR_web_2:
