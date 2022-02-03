@@ -1,5 +1,5 @@
 #Práctica ServidorApacheWeb
- - Contenedor Server:
+  Contenedor Server:
  - Creación del contenedor apachesever
  - Escogo la imagen httpd
  - La red crear se llamará  br02.
