@@ -21,7 +21,8 @@
  <p> La red creada sera br02 con la ip estatica 10.1.0.9</p>
  <p>Los puertos utilizados son el 53:53</p>
  <p> La ruta del volumen es: conf:/etc/bind</p>
-            version: "2.2"
+
+version: "2.2"
 services:
   asir_bind9_2:
     image: internetsystemsconsortium/bind9:9.16
