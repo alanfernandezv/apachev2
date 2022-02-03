@@ -16,7 +16,7 @@
        br02:
         ipv4_address: 10.1.0.10
 
-Contenedor DNS Bind
+## Contenedor DNS Bind
  Imagen del contenedor: internetsystemsconsortium/bind9:9.16
  La red creada sera br02 con la ip estatica 10.1.0.9
  Los puertos utilizados son el 53:53
@@ -59,7 +59,7 @@ networks:
     external: true
 
 
-Creacion de los Host virtuales:
+## Creacion de los Host virtuales:
 <VirtualHost *:80>
     
     DocumentRoot "/usr/local/apache2/htdocs/index1.html"
@@ -69,7 +69,7 @@ Creacion de los Host virtuales:
 </VirtualHost>
 
 
-Configuracion del DNS:
+## Configuracion del DNS:
 
 ;
 ; BIND data file for example.com
@@ -89,13 +89,13 @@ ns  IN  A   10.0.0.254
 example.com. IN  A   10.0.0.10
 pagina1 IN  CNAME   example.com.
 
-ZONA:
+## ZONA:
 zone "example.com" {
     type master;
     file "/etc/bind/db.example.com";
 };
 
-FORWARD:
+## FORWARD:
 forwarders {
 	8.8.8.8; //google.com
 	8.8.4.4; //google.com
